@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover .faq-arrow {
+  transform: rotate(360deg);
+}
+.faq-answer {
+  display: none;
+  font-size: 0.9rem;
+  /* Hide answer by default */
+}
+
+.faq-item:hover .faq-answer {
+  display: block;
+  /* Show answer when hovering over the FAQ item */
+}
+
+.app {
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flair {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+}
+
+
+
